@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: inter-bold;
+	src: url(./Inter-VariableFont_opsz\,wght.ttf);
+	font-weight:bold;
+}
+
+@font-face {
+	font-family: inter;
+	src: url(./Inter-VariableFont_opsz\,wght.ttf);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*.banner{
+    width: 50%;
+    height: 15vh;
+    background-color: #ffff;
+    margin-top: -20px;
+}*/
+
+.navbar {
+	background-color: #e9e9e9;
+	display: flex;
+	padding: 16px 50px;
+    align-items: center;
+    box-shadow: 0px 1px 5px black;
+    cursor: default;
+}
+
+header {
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+}
+
+.companyinfo {
+	padding: 10px 20px;
+	text-align: center;
+	vertical-align: middle;
+    white-space: nowrap;
+    overflow: initial;
+    text-overflow: ellipsis; 
+    display: inline-block;
+}
+
+.name {
+    display: inline-block;
+    white-space: nowrap;
+	font-family: inter-bold;
+	font-size: 1.80vw;
+}			
+.info {
+    display: inline-block;
+    white-space: nowrap;
+	font-family: inter-bold;
+	font-size: 1vw;
+}
+
+.interactive {
+	margin-left: auto; 
+	margin-right: 0;
+	padding:0px 30px;
+	flex: 0.9 0.9 auto;
+	display:flex;
+	text-align: right;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+#Titlee{
+    margin-left: 1%;
+    margin-right: 10%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#subtitle{
+    font-size: small;
+    font-weight: 700;
+}
+
+.interactive ul{
+	margin-left: auto; 
+	margin-right: 0;
+	padding-right:25px;
+	display: flex;
+	float: right;
+}
+
+.search-container{
+    border: none;
+	padding:10px 0px;
+	padding-right:25px;
+}
+
+.search-input {
+    height: 15px;
+    padding: 15px;
+    padding-top: 15px;
+    text-align: right;
+    border-width: 5%;
+    border-radius: 25px;
+
+    font-weight: 300;
+    font-size: 100%;
+    background-color: #2F3095;
+    border: none;
+    color: white;
+    transition: 0.5s;
+    cursor: text;
+	float:right;
+    box-shadow: 10 20 5 #000;
+  }
+
+.navbar .search-input:hover{
+    background-color: #F8931D;
+    border: none;
+}
+
+.interactive ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 25px;
+    position: relative;
+    margin-right: 15px;
+    font-weight: 700;
+    
+}
+
+.interactive ul li a{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    display: block;
+}
+
+.interactive ul li::after{
+    content: ' ';
+    height: 3px;
+    width: 0;
+    background: #598CEE;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.interactive ul li:hover::after {
+    width: 100%;
+}
+
+.profile img {
+    cursor: pointer;
+	float: right;
+    border-radius: 50%;
+}
+
+.format {
+    font-weight: 600;
+    color: #F8931D;
+}
+
+.profile {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.profile:hover .dropdown {
+    display: block; 
+}
+
+.dropdown-menu {
+    background-color: white;
+    border: 2px solid #f8931d;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 175px;
+}
+
+.dropdown-menu h3 {
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.dropdown-menu hr {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 10px 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown-menu ul li {
+    color: black;
+    padding: 8px 0;
+    text-align: right;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.dropdown-menu ul li:hover {
+    background-color: #f8931d;
+    color: white;
+    border-radius: 5px;
+}
+
+#menu {
+    display: none;
+}
+
+/*for phone menu*/
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(248, 147, 29);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .fullscreen-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .menu-content {
+    text-align: center;
+  }
+  
+  .menu-content ul {
+    list-style-type: none;
+  }
+  
+  .menu-content li {
+    margin: 20px 0;
+  }
+  
+  .menu-content a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-content a:hover {
+    color: #f39c12;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+
+/*navbar for phones*/
+@media screen and (max-width: 900px) {
+    .interactive, .profile {
+        display: none;
+    }
+    .navbar {
+        padding: 20px;
+        height: 75px;
+    }
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+    .companyinfo {
+        padding-left: 10px;
+        text-align: left;
+        line-height: 0.8;
+    }
+    .companyinfo .name {
+        font-size: 4vw;
+    }
+    .companyinfo .info {
+        font-size: 2vw;
+    }
+    #menu {
+        display: block;
+        height: 35px;
+        width: 35px;
+    }
+    .phoneMenu {
+        right: 20px;
+        position: absolute;
+    }
+    .phoneMenu img {
+        cursor: pointer;
+        float: right;
+    }
+}
+
+body html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.body {
+    background-color: #db6f20;;
+    display: grid;
+    place-items: center;
+}
+.background { 
+    box-shadow: 2px 0px 6px black;
+    width:  1200px;
+    height: 1900px;
+    background-color: whitesmoke;
+    margin: 20px;
+    padding: 20px 10px;
+    opacity: .9;
+    border: #f8931d;
+    border-radius: 20px;
+}
+.scroll-container {
+    background-color: whitesmoke;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    flex-wrap: nowrap;
+    margin-left: 0px;
+}
+ .scroll-container .card-image {
+    flex: 0 0 auto;
+    padding: 10px;
+ }
+.pet-supp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.title {
+    font-family: inter-bold;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    margin:  10px;
+    color:  #d58523;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: bold;
+}
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    background-color: rgb(224, 223, 223);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 250px;
+    height: 380px;
+    margin: 10px;
+    border: solid;
+    border-color: rgb(224, 223, 223);
+    border-radius: 10px;
+    box-shadow: #696969 0px 0px 4px;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 20px  ;
+    transition: transform(1.1) 0.3s ease;
+}
+.card-image {
+    background-color: white;
+    height: 150px;
+    margin: 8px;
+    background-size: cover;
+    background-position: center;
+    background-size: 100% 100%;
+    border: solid;
+    border-radius: 5px 5px 0px 0px;
+    border-color: whitesmoke;
+}
+.product-name {
+    font-family: inter-bold;
+    font-size: 15px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    white-space: normal;
+    font-weight: bold;
+}
+.label {
+    font-family: inter-bold;
+    margin: 10px;
+    justify-content: center;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    white-space: normal;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.product-checkout {
+    padding: 10px;
+    background-color: #598CEE;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: inter-bold;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    overflow: hidden;
+}
+.product-checkout:hover {
+    background-color: #2F2A8C;
+    transition: transform 2s ease;
+}
+.product-1 {
+    background-image: url('./RESOURCES/Chefs_Special_Tomahawk_Steak.png');
+}
+.product-2 {
+    background-image: url('./RESOURCES/Muffins_Pet_Sausage_Beef\ Flavor.png');
+}
+.product-3 {
+    background-image: url('./RESOURCES/Goat\ Milk\ \(Milk\ Replacer\).png');
+}
+.product-4 {
+    background-image: url('./RESOURCES/Cosi\ Pet\ Milk.png');
+}
+.product-5 {
+    background-image: url('./RESOURCES/Holistic\ Puppy.png');
+}
+.product-6 {
+    background-image: url('./RESOURCES/Holistic\ Adult.png');
+}
+.product-7 {
+    background-image: url('./RESOURCES/Pedigree\ Chicken\,\ Egg\,\ &\ Milk\ Puppy.png');
+}
+.product-8 {
+    background-image: url('./RESOURCES/Pedigree\ Beef\ &\ Veg\ Adult.png');
+}
+.product-9 {
+    background-image: url('./RESOURCES/Nutri\ Chunks\ Puppy\ Hi\ Protein\ Lamb\ Chicken\ Liver\ and\ Milk\ Puppy.png');
+}
+.product-10 {
+    background-image: url('./RESOURCES/Nutrichunks\ Beef\ and\ Chicken\ Liver\ Meal\ Adult.png');
+}
+.product-11 {
+    background-image: url('./RESOURCES/Beefpro\ Puppy.png');
+}
+.product-12 {
+    background-image: url('./RESOURCES/Beefpro\ Adult.png');
+}
+.product-13 {
+    background-image: url('./RESOURCES/Yumyum\ Puppy.png');
+}
+.product-14 {
+    background-image: url('./RESOURCES/Yumyum\ Adult.png');
+}
+.product-15 {
+    background-image: url('./RESOURCES/Top\ Breed\ Puppy.png');
+}
+.product-16 {
+    background-image: url('./RESOURCES/Top\ Breed\ Adult.png');
+}
+.product-17 {
+    background-image: url('./RESOURCES/Aozi\ Lamb\ and\ Apple\ Puppy.png');
+}
+.product-18 {
+    background-image: url('./RESOURCES/Aozi\ Lamb\ and\ Apple\ Adult.png');
+}
+.product-19 {
+    background-image: url('./RESOURCES/Aozi\ Beef\ Puppy.png');
+}
+.product-20 {
+    background-image: url('./RESOURCES/Aozi\ Beef\ Adult.png');
+}
+.product-21 {
+    background-image: url('./RESOURCES/Special\ Dog\ Puppy.png');
+}
+.product-22 {
+    background-image: url('./RESOURCES/Special\ Dog\ Adult.png');
+}
+.product-23 {
+    background-image: url('./RESOURCES/Pedigree\ Rodeo.png');
+}
+.product-24 {
+    background-image: url('./RESOURCES/Pedigree\ Meat\ Jerky.png');
+}
+.product-25 {
+    background-image: url('./RESOURCES/Pedigree\ Dentastix.png');
+}
+.product-26 {
+    background-image: url('./RESOURCES/Pedigree\ Home\ Style\ Puppy.png');
+}
+.product-27 {
+    background-image: url('./RESOURCES/Pedigree\ Home\ Style\ Adult.png');
+}
+.product-28 {
+    background-image: url('./RESOURCES/Pedigree\ Beef\ Egg\ Loaf.png');
+}
+.product-29 {
+    background-image: url('./RESOURCES/Pedigree\ Beef\ Flavour\ in\ Gravy.png');
+}
+.product-30 {
+    background-image: url('./RESOURCES/Pedigree\ Chicken\ and\ Liver\ in\ Gravy.png');
+}
+.product-31 {
+    background-image: url('./RESOURCES/Pedigree\ Simmered\ Beef\ Loaf.png');
+}
+.product-32 {
+    background-image: url('./RESOURCES/Pedigree\ Grilled\ Liver\ Loaf.png');
+}
+.product-33 {
+    background-image: url('./RESOURCES/Whiskas\ Kitten.png');
+}
+.product-34 {
+    background-image: url('./RESOURCES/Whiskas\ Adult.png');
+}
+.product-35 {
+    background-image: url('./RESOURCES/Mondex\ D\ -\ Glucose\ Monohydrate.png');
+}
+.product-36 {
+    background-image: url('./RESOURCES/OTIDERM\ Ear\ Drops.png');
+}
+.product-37 {
+    background-image: url('./RESOURCES/Papi\ BronCure.png');
+}
+.product-38 {
+    background-image: url('./RESOURCES/VIDDAPET\ N4P\ Pet\ Nutrition\ Supplement.png');
+}
+.product-39 {
+    background-image: url('./RESOURCES/Oatmeal\ Medicated\ Shampoo\ &\ Conditioner.png');
+}
+.product-40 {
+    background-image: url('./RESOURCES/Fur\ Magic\ Dog\ Shampoo.png');
+}
+.product-41 {
+    background-image: url('./RESOURCES/Saint\ Roche\ Premium\ Happiness\ Scent\ Dog\ Coat\ Conditioner.png');
+}
+.product-42 {
+    background-image: url('./RESOURCES/Baby\ Boo\ Female\ Diaper.png');
+}
+.product-43 {
+    background-image: url('./RESOURCES/Madre\ De\ Cacao.png');
+}
+.product-44 {
+    background-image: url('./RESOURCES/Bioline\ Kitten\ Shampoo.png');
+}
+.product-45 {
+    background-image: url('./RESOURCES/Bioline\ Cat\ Shampoo.png');
+}
+.product-46 {
+    background-image: url('./RESOURCES/Sulfur\ Medicated\ Soap.png');
+}
+.product-47 {
+    background-image: url('./RESOURCES/Pet\ Cologne\ Citrus\ Scent.png');
+}
+.product-48 {
+    background-image: url('./RESOURCES/Pet\ Cologne\ Vannila\ Scent.png');
+}
+.product-49 {
+    background-image: url('./RESOURCES/Mutant\ Lab\ Premium\ Shampoo.png');
+}
+.product-50 {
+    background-image: url('./RESOURCES/Stainless\ Food\ Bowl.png');
+}
+.product-51 {
+    background-image: url('./RESOURCES/Dual\ Pet\ Food\ Bowl.png');
+}
+.product-52 {
+    background-image: url('./RESOURCES/Double\ Sided\ Massage\ Comb.png');
+}
+.product-53 {
+    background-image: url('./RESOURCES/Double\ Sided\ Brush.png');
+}
+.product-54 {
+    background-image: url('./RESOURCES/Police\ Dog\ Collar.png');
+}
+.product-55 {
+    background-image: url('./RESOURCES/Clumping\ Cat\ Litter.png');
+}
+.product-56 {
+    background-image: url('./RESOURCES/Dog\ Muzzle.png');
+}
+.card:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px) {
+    .scroll-container {
+        width: 350px;
+        overflow-x: scroll;
+        margin-left: 0px;
+        justify-content: flex-start;
+    }
+    .scroll-container .card {
+        width: 130px;
+        height: 310px;
+        margin: 2vw;  
+    }
+    .card-image {
+       height: 100px;
+    }
+    .product-name {
+        font-size: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .label {
+        font-size: 10px;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .background {
+        width: 330px;
+        height: 1620px;
+        margin: 10px;
+    }
+    .title {
+        font-size: 17px;
+    }
+    .pet-supp .card {
+        width: 130px;
+        height: 310px;
+        margin: 3vw;
+    }
+    .pet-supp {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        margin-left: 0px;
+        padding: 10px;    
+        margin: 0px;   
+        justify-content: flex-start; 
+    }
+    .pet-supp .container {
+        display: flex;
+        justify-content: center;
+    }
+    .product-checkout {
+        display: flex;
+        width: 45px;
+        margin: 1vh;
+        margin: 1vw;
+        height: 20px;
+        font-size: 8px;
+        position: absolute;
+        overflow: hidden;
+        padding: 6px;
+        text-align: center;
+    }
+}
+
+.footer { 
+    background-color: #2F2A8C;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+    gap: 40px;
+    position: relative;
+    min-height: fit-content;
+    cursor: default;
+}
+
+.footer .left {
+    white-space: nowrap;
+    overflow: initial;
+    text-overflow: ellipsis; 
+    display: inline-block;
+}
+
+.footer .left h1 {
+    margin: 0;
+    font-size: 28px;
+    text-align: right;
+}
+
+.footer .left p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    text-align: right;
+}
+
+.footer .divider1 {
+    width: 2px;
+    background-color: white;
+    height: 150px;
+}
+
+.footer .divider2 {
+    width: 90%;
+    background-color: white;
+    height: 2px;
+    display: none;
+}
+
+.footer .right {
+    text-align: left;
+    display: inline-block;
+}
+
+.footer .right p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.footer .right a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.footer .right a:hover {
+    text-decoration: underline;
+}
+
+.footer .icons {
+    display: flex;
+    margin-top: 10px;
+    justify-content: start;
+}
+
+.footer .icons a {
+    margin-right: 10px;
+}
+
+.footer .icons a img {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+.footer .icons img {
+    box-shadow: 1px 0px 10px rgb(50, 50, 50);
+}
+
+.footer {
+    text-shadow: 1px 0px 10px rgb(50, 50, 50);
+}
+
+/*footer texture*/
+.footer-texture {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-texture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./RESOURCES/cat-pattern-white.png');
+    background-size: 750px; 
+    background-repeat: repeat; 
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.footer {
+    position: relative;
+    z-index: 0;
+}
+
+/*footer for phone*/
+@media screen and (max-width: 900px) {
+    .footer {
+        gap: 20px;
+        padding: 20px;
+    }
+    .footer .divider1 {
+        display: none;
+    }
+    .footer .divider2 {
+        display: block;
+    }
+    .footer .left, .right {
+        padding: 10px;
+    }
+    .footer .left {
+        padding-top: 20px;
+    }
+    .footer .right {
+        padding: 0 20px 10px 20px;
+    }
+    .footer .left h1 {
+        text-align: center;
+    }
+    .footer .left p {
+        text-align: center;
+    }
+}

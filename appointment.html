@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment</title>
+    <link rel="stylesheet" href="appointment.css">
+	 <link rel="icon" type="image/x-icon" href="./RESOURCES/pablo.png">
+</head>
+<body>
+    <header class="navbar">
+		<img src="./RESOURCES/pablo.png" width="75" height="75" alt="logoproj" class="logo">
+		<div class="companyinfo">
+			<span class="name"> PABLO'S FUR FRIENDS </span><br>
+			<span class="navinfo"> GROOMING, BOARDING & PET SUPPLIES </span>
+		</div>
+		<div class="interactive">
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./services.html">Services</a></li>
+				<li><a href="./products.html">Products</a></li>
+				<li><a href="./about.html">About Us</a></li>
+			</ul>
+		</div>
+		<div class="profile">
+			<a href="profile.html"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/462560719_3856025144618486_6347667910021724810_n.jpg?stp=cp0_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEc7iKoPdg9WQkKtTsgr0QYNh1QWxc64rk2HVBbFzriucKHJ6tNMaa_Qn3o254uZeEAtVr1Z49yANTEo4BkcH7k&_nc_ohc=OFzEqKYnqEAQ7kNvgEkH6dU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QFnQ3pssLkwlSW2qaD7eRUPUj2Gke7BvayQyz6naj1Mjg&oe=676554EF" width="50" height="50" alt="Profile Picture"></a>
+			<div class="dropdown">
+				<div class="dropdown-menu">
+					<h3>Juan Dela Cruz</h3>
+					<hr>
+					<ul>
+						<a href="profile.html"><li>Profile</li></a>
+						<li>Orders</li>
+						<li>Appointments</li>
+						<li>Log-Out</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="fullscreen-menu" class="fullscreen-menu hidden">
+			<div class="menu-content">
+			  <button id="close-menu" class="close-btn">&times;</button>
+			  <ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="products.html">Products</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			  </ul>
+			</div>
+		</div>
+		<div class="phoneMenu">
+			<img src="./RESOURCES/hamburger-menu.png" alt="Menu" id="menu">
+		</div>
+    </header>
+<div class="appointment-container">
+	<div class="appointment">
+		<h1>Set an Appointment</h1>
+		<form action="#" method="POST">
+			<div class="form-group">
+				<label for="name">Full Name</label>
+				<input type="text" id="name" name="name" placeholder="Enter your full name" required>
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email Address</label>
+				<input type="email" id="email" name="email" placeholder="Enter your email" required>
+			</div>
+
+			<div class="form-group">
+				<label for="address">Date and Time of Appointment</label>
+				<input type="date" id="expiry-date" name="expiry-date" placeholder="Date" required>
+				<select id="payment" name="payment" required>
+					<option value="10AM-12PM"> 10AM-12PM</option>
+					<option value="12PM-2PM"> 12PM-2PM</option>
+					<option value="2PM-4PM"> 2PM-4PM</option>
+					<option value="4PM-6PM"> 4PM-6PM</option>
+					<option value="6PM-8PM"> 6PM-8PM</option>
+				</select>
+			</div>
+
+			<button type="submit" class="btn">Confirm Schedule</button>
+		</form>
+	</div>
+</div>
+<div class="footer-texture">
+	<footer class="footer">
+		<div class="left">
+			<h1>Pablo's Fur Friends</h1>
+			<p>Your One Stop Pet Shop.</p>
+		</div>
+		<div class="divider2"></div>
+		<div class="divider3"></div>
+		<div class="right">
+			<h3><strong>Contact</strong></h3>
+			<p>Address: 5073 Filmore St, Makati, 1235 Metro Manila</p>
+			<p>Phone: +63 967 300 3285</p>
+			<p>Email: <a href="mailto:pablosfurfriends@gmail.com">pablosfurfriends@gmail.com</a></p>
+			<div class="icons">
+				<a href="https://www.facebook.com/p/Pablos-Fur-Friends-Pet-Supplies-Grooming-Salon-Boarding-100086581667331/" target="_blank" title="Pablo's Fur Friends Facebook Page!"><img src="./RESOURCES/fb.png" alt="Facebook"></a>
+				<a href="https://www.instagram.com/PablosFurFriends/" target="_blank" title="Pablo's Fur Friends Instagram Page!"><img src="./RESOURCES/ig.png" alt="Instagram"></a>
+				<a href="https://maps.app.goo.gl/7nULZKH7hjSSoawY8" target="_blank" title="Pablo's Fur Friends Google Map Location!"><img src="./RESOURCES/google-maps.jfif" alt="Google Maps"></a>
+			</div>
+		</div>
+	</footer>
+</div> 
+<script src="main-script.js"></script> 
+</body>
+</html>
